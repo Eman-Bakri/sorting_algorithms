@@ -66,11 +66,12 @@ size_t _partitionlomuto(int *array, size_t size, ssize_t left, ssize_t right)
  */
 void _intswap(int *array, size_t size, int *x, int *y)
 {
-	int holder;
-
-	holder = *x;
-	*x = *y;
-	*y = holder;
-	print_array((const int *)array, size);
+	if (*x != *y)
+	{
+		*x = *x + *y;
+		*y = *x - *y;
+		*x = *x - *y;
+		print_array((const int *)array, size);
+	}
 }
 
