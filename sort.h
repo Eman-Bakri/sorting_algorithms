@@ -25,6 +25,10 @@ void print_list(const listint_t *list);
 
 /*helper functions*/
 void _nodeswap(listint_t *first, listint_t *second);
+void _intswap(int *array, size_t size, int *x, int *y);
+int _partitionlomuto(int *array, size_t size, ssize_t left, ssize_t right);
+void _sortquick(int *array, size_t size, ssize_t left, ssize_t right);
+void quick_sort(int *array, size_t size);
 
 /* Sorting functions */
 void bubble_sort(int *array, size_t size);
