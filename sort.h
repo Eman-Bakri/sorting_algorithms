@@ -28,7 +28,12 @@ void _nodeswap(listint_t *first, listint_t *second);
 void _intswap(int *array, size_t size, int *x, int *y);
 size_t _partitionlomuto(int *array, size_t size, ssize_t left, ssize_t right);
 void _sortquick(int *array, size_t size, ssize_t left, ssize_t right);
-void quick_sort(int *array, size_t size);
+size_t _Knuthmax(size_t size);
+void _topdownmerge(int *array, size_t begin, size_t end, int *buff);
+void _comparemerge(int *array, size_t begin, size_t end, int *buff);
+void _heapify(int *array, size_t size);
+void _siftdownheap(int *array, size_t begin, size_t end, size_t size);
+void _intswap(int *array, size_t size, int *x, int *y);
 
 /* Sorting functions */
 void bubble_sort(int *array, size_t size);
