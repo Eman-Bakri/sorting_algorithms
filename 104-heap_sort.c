@@ -33,13 +33,14 @@ void heap_sort(int *array, size_t size)
  */
 void _heapify(int *array, size_t size)
 {
-	size_t begin, x;
-	size_t i = 0;
+	size_t begin;
+	size_t i = 1;
 
-	x = size - 1;
-	for (begin = parent(x); i < begin; begin--)
+	begin = parent(size - 1);
+	while (begin >= i - 1)
 	{
 		_siftdownheap(array, begin, size - 1, size);
+		begin--;
 	}
 }
 /**
