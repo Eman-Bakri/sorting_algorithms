@@ -34,10 +34,17 @@ void heap_sort(int *array, size_t size)
 void _heapify(int *array, size_t size)
 {
 	size_t begin;
-	size_t i = 1;
+	unsigned int i = 1;
+	unsigned int t;
 
+	t = i - 1;
 	begin = parent(size - 1);
-	while (begin >= i - 1)
+	while (begin > 0)
+	{
+		_siftdownheap(array, begin, size - 1, size);
+		begin--;
+	}
+	while (begin == t)
 	{
 		_siftdownheap(array, begin, size - 1, size);
 		begin--;
